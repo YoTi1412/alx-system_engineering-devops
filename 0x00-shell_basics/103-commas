@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a -1 -v | awk '{printf("%s%s",sep,$0); sep=",\n"}'
+ls -apvm
