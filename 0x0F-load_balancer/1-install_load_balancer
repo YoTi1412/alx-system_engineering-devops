@@ -18,5 +18,14 @@ backend web_servers
 
 EOF 
 
-service haproxy restart
+# Restart HAProxy
+sudo systemctl restart haproxy
 
+# Enable HAProxy to start on boot
+sudo systemctl enable haproxy
+
+# Ensure the server hostnames are correct
+sudo hostnamectl set-hostname 369326-lb-01
+
+# Reboot for changes to take effect
+sudo reboot
